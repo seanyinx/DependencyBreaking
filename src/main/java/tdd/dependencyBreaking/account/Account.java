@@ -4,13 +4,14 @@ import java.util.Date;
 
 public class Account{
 
-    private Date deactivatedAt;
+  private final DateMaker dateMaker = new DateMaker();
+  private Date deactivatedAt;
     private boolean active = true;
 
-    public void deactivate(){
+  public void deactivate(){
         
         this.active = false;
-        this.deactivatedAt = new DateMaker().now();
+        this.deactivatedAt = dateMaker.now();
         
         // ...
     }
@@ -22,10 +23,4 @@ public class Account{
     public boolean isActive() {
         return active;
     }
-
-  private class DateMaker {
-    public Date now() {
-      return new Date();
-    }
-  }
 }
