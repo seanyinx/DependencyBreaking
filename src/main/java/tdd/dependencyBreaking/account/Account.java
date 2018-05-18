@@ -6,7 +6,7 @@ public class Account{
 
     private Date deactivatedAt;
     private boolean active = true;
-    
+
     public void deactivate(){
         
         this.active = false;
@@ -22,5 +22,4 @@ public class Account{
     public boolean isActive() {
         return active;
     }
-    
 }
