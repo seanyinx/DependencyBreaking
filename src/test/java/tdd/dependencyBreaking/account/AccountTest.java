@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class AccountTest {
 
-  private final Account account = new Account();
+  private final Account account = new Account(new DateMaker());
 
   @Test
   public void deactivateAtSpecifiedTime() throws Exception {

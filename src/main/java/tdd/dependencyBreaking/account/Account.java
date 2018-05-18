@@ -4,9 +4,13 @@ import java.util.Date;
 
 public class Account{
 
-  private final DateMaker dateMaker = new DateMaker();
+  private final DateMaker dateMaker;
   private Date deactivatedAt;
     private boolean active = true;
+
+  public Account(DateMaker dateMaker) {
+    this.dateMaker = dateMaker;
+  }
 
   public void deactivate(){
         
