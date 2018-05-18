@@ -10,16 +10,22 @@ public class Account{
     public void deactivate(){
         
         this.active = false;
-        this.deactivatedAt = new Date();
+        this.deactivatedAt = new DateMaker().now();
         
         // ...
     }
 
-    public Date getDeactivatedAt() {
+  public Date getDeactivatedAt() {
         return deactivatedAt;
     }
 
     public boolean isActive() {
         return active;
     }
+
+  private class DateMaker {
+    public Date now() {
+      return new Date();
+    }
+  }
 }
